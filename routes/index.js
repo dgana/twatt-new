@@ -11,7 +11,7 @@ var client = new Twitter({
   access_token_secret: config.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-router.get('/user', function(req,res){
+router.get('/add', function(req,res){
   const add_query = req.query.status
   client.post('statuses/update', {status: add_query}, function(error, tweets, response) {
      res.send(tweets);
